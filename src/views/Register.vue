@@ -28,11 +28,11 @@
                             <small>password strength: <span class="text-success font-weight-700">strong</span></small>
                         </div>
                         <div class="row my-4">
-                            <div class="col-12">
+                            <!-- <div class="col-12">
                                 <base-checkbox class="custom-control-alternative">
                                     <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
                                 </base-checkbox>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="text-center">
                             <base-button type="primary" class="my-4">Create account</base-button>

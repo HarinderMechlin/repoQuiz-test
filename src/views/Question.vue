@@ -8,7 +8,7 @@
         <div class="col">
           <div class="card shadow">
             <div class="card-header bg-transparent">
-              <h3 class="mb-0">View Job Seeker</h3>
+              <h3 class="mb-0">View Question</h3>
             </div>
             <div class="card-body">
               <div class="row">
@@ -16,7 +16,16 @@
                   <v-dialog v-model="dialog" persistent max-width="700px">
                     <template v-slot:activator="{ on }">
                       <v-card-actions>
-                    
+                        <v-btn
+                          class="mx-2"
+                          fab
+                          dark
+                          large
+                          color="cyan"
+                          title="Upload Question"
+                        >
+                          <i class="fa fa-upload fa-lg" aria-hidden="true"></i>
+                        </v-btn>
                         <v-spacer></v-spacer>
                         <v-btn
                           class="mx-2"
@@ -246,18 +255,18 @@ export default {
         address: null,
       },
       headers: [
-        { text: "Id", value: "job_seeker_id" },
+        { text: "Id", value: "question_id" },
         {
-          text: "Name",
-          value: "name",
+          text: "Question content",
+          value: "question_content",
         },
-        { text: "Email", value: "email" },
-        { text: "address", value: "address" },
-        { text: "contact", value: "contact" },
-        { text: "profile", value: "profile" },
-        { text: "experience", value: "experience" },
-        { text: "duration", value: "duration" },
-        { text: "isQuizRequired", value: "isMutipleSelection" },
+        { text: "Answer 1", value: "ans1" },
+        { text: "Answer 2", value: "ans2" },
+        { text: "Answer 3", value: "ans3" },
+        { text: "Answer 4", value: "ans4" },
+        { text: "Difficulty", value: "difficulty" },
+        { text: "Category", value: "category" },
+        { text: "Mutiple Selection", value: "isMutipleSelection" },
         { text: "Action", value: "actions", sortable: false },
       ],
       items: [],
@@ -371,7 +380,7 @@ export default {
     this.loadItems(),
       axios({
         method: "get",
-        url: `${io.baseURL}/common/getJobSeekerInfo`,
+        url: `${io.baseURL}/common/getQuestion`,
       })
         .then(
           (response) => (

@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import './registerServiceWorker'
 import ArgonDashboard from './plugins/argon-dashboard'
-
+//import '@andresouzaabreu/vue-data-table/dist/DataTable.css'
 
 Vue.config.productionTip = false
 

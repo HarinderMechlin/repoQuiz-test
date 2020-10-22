@@ -5,11 +5,9 @@
             <!-- Mask -->
             <span class="mask bg-gradient-success opacity-8"></span>
             <!-- Header container -->
-            <div class="container-fluid d-flex align-items-center">
+            <div class="container-fluid ">
                 <div class="row">
-                 
                         <a href="#!" class="btn btn-info">Edit profile</a>
-                 
                 </div>
             </div>
         </base-header>
